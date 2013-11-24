@@ -37,3 +37,14 @@ def Mean(suite):
     return total
     
 print Mean(suite)
+
+def Percentile(pmf, percentage):
+    p = percentage / 100.0
+    total = 0
+    for val, prob in pmf.Items():
+        total += prob
+        if total >= p:
+            return val
+
+interval = Percentile(suite, 5), Percentile(suite, 95)
+print interval
