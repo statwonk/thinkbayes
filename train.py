@@ -23,7 +23,7 @@ class Train(Dice):
             self.Set(hypo, hypo**(-alpha))
         self.Normalize()
             
-hypos = xrange(1, 1001)
+hypos = xrange(1, 8001)
 suite = Train(hypos)
 suite.Update(30)
 suite.Update(60)

@@ -16,8 +16,9 @@ class Dice(Suite):
         else:
             return 1.0/hypo
             
-suite = Dice([8, 12, 20])
+suite = Dice([4, 6, 8, 12, 20])
 suite.Update(6)
+
 for roll in [6, 8, 7, 7, 5, 4]:
     suite.Update(roll)    
 
